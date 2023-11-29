@@ -8,17 +8,17 @@ let currentYear = 2024;
 let profilePicture = "image/placeholder.png";
 
 /* Step 3 - Element Variables */
-const nameElement = document.getElementByID("name");
+const nameElement = document.getElementById("name");
 const foodElement = document.getElementById("food");
 const yearElement = document.querySelector("#year");
-const imageElemnt = document.querySelector('src="images/placeholder.png"');
+const imageElement = document.querySelector('img[src="images/placeholder.png"]');
 
 /* Step 4 - Adding Content */
 nameElement.innerHTML = "<strong>${fullName}</strong>";
 yearElement.textContent = currentYear;
-imageElemnt.setAttribute("src", profilePicture);
+imageElement.setAttribute("img", profilePicture);
 
-imageElemnt.setAttribute("alt", "Profile image of ${profilePicture}");
+imageElement.setAttribute("alt", "Profile image of ${profilePicture}");
 
 
 /* Step 5 - Array */
