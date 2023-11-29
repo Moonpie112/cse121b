@@ -3,7 +3,7 @@
 /* Step 1 - Setup type tasks - no code required */
 
 /* Step 2 - Variables */
-let fullname = "Kayla";
+let fullname = "Kayla Moon";
 let currentYear = 2024;
 let profilePicture = "image/placeholder.png";
 
@@ -14,7 +14,7 @@ const yearElement = document.querySelector("#year");
 const imageElement = document.querySelector('img[src="images/placeholder.png"]');
 
 /* Step 4 - Adding Content */
-nameElement.innerHTML = "<strong>${fullName}</strong>";
+nameElement.innerHTML = `<strong>${fullname}</strong>`;
 yearElement.textContent = currentYear;
 imageElement.setAttribute("img", profilePicture);
 
@@ -24,8 +24,3 @@ imageElement.setAttribute("alt", "Profile image of ${profilePicture}");
 /* Step 5 - Array */
 
 const favoriteFoods = ["Pho", "Strawberries", "Sandwhiches", "Sushi"];
-
-
-
-
-
