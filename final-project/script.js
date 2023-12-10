@@ -90,13 +90,13 @@ function checkAnswer() {
         let selectedAnswer = answers.querySelector('.selected span').textContent;
         // result if they answer correctly
         if(selectedAnswer.trim() == HTMLdecode(correctAnswer)){
-            result.innerHTML = `<p>Correct Answer!</p>`;
+            result.innerHTML = `<p>Correct Answer!</br>Please wait for the screen to load!</p>`;
             updateTotalScore();
 
         }
         // result if they answer incorrectly
         else {
-            result.innerHTML = `<p> Incorrect Answer!</p><p><small><b>Correct Answer: </b> ${correctAnswer}</small></p>`
+            result.innerHTML = `<p>Please wait for the screen to load!</br>Incorrect Answer!</p><p><small><b>Correct Answer: </b> ${correctAnswer}</small></p>`
         }
         checkCount();
     // if the person didn't click on an answer
@@ -124,7 +124,7 @@ function checkCount() {
     } else {
         setTimeout(() => {
             loadQuestion();
-        }, 2500);
+        }, 500);
     }
 }
 

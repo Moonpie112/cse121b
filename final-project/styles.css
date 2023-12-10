@@ -111,14 +111,6 @@ body {
     transform: scale(0.97);
 }
 
-.quiz-answers li:incorrect_answer{
-    background-color: red;
-}
-
-.quiz-answers li:correct_answer{
-    background-color: green;
-}
-
 #result {
     padding: .5rem;
     font-size: 1rem;
