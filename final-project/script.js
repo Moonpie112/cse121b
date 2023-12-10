@@ -33,7 +33,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // gets info from JSON file
-
 async function loadQuestion(){
     const response = await fetch('https://opentdb.com/api.php?amount=20&category=9&type=multiple');
     const data = await response.json();
@@ -100,6 +99,7 @@ function checkAnswer() {
             result.innerHTML = `<p> Incorrect Answer!</p><p><small><b>Correct Answer: </b> ${correctAnswer}</small></p>`
         }
         checkCount();
+    // if the person didn't click on an answer
     } else {
         result.innerHTML = `<p>Please select an answer!</p>`
         nextButton.disabled = false;
@@ -113,7 +113,7 @@ function HTMLdecode (textString) {
     let doc = new DOMParser().parseFromString(textString, "text/html");
     return doc.documentElement.textContent;
 }
-
+// counts total questions answered and gives results
 function checkCount() {
     askedCount++;
     setCount();
@@ -128,6 +128,7 @@ function checkCount() {
     }
 }
 
+// caluclates difficulty of question into points from JSON file
 function calculateScore(difficulty) {
     switch (difficulty.toLowerCase()) {
         case 'easy':
@@ -145,11 +146,13 @@ function calculateScore(difficulty) {
     }
 }
 
+// sums up the points
 function updateTotalScore() {
     totalScore += questionScore;
     correctScore.textContent = totalScore
 }
 
+// counts the questions
 function setCount() {
     totalQuestion.textContent = questionTotal;
     currentQuestion.textContent = currentQuestions;
