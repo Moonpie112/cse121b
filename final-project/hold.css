@@ -68,7 +68,6 @@ body {
     padding: .4rem 1rem;
     border-radius: 4px;
     background-color: var(--button-next);
-    margin: 1rem;
 }
 
 /* Questions */
@@ -111,29 +110,8 @@ body {
     transform: scale(0.97);
 }
 
-.quiz-answers li:incorrect_answer{
-    background-color: red;
-}
-
-.quiz-answers li:correct_answer{
-    background-color: green;
-}
-
-#result {
-    padding: .5rem;
-    font-size: 1rem;
-    font-weight: 600;
-    margin-bottom: .5rem;
-}
 
 /* Footer */
-
-/* javascript stuff so that the button stays hover color when it's selected */
-.selected{
-    background-color: var(--button-difficulty)!important;
-    color: var(--text-default)!important;
-    box-shadow: 0 4px 0 0 #64ADBF!important;
-}
 
 
 .quiz-foot button{
@@ -154,6 +132,7 @@ body {
     transition:  var(--transition);
     width: 100%;
 
+    display: none;
 }
 
 .quiz-foot button:hover{
@@ -166,22 +145,7 @@ body {
     transform: scale(.9);
 }
 
-#check-answer{
-    display: block;
-}
 
-#play-again{
-    display: none;
-}
-
-.small-text{
-    margin-top: 1rem;
-    background-color: var(--button-answer);
-    color: var(--text-button-answer);
-    letter-spacing: .5px;
-    padding: .7rem;
-    border-radius: 4px;
-}
 .bottom {
     display: flex;
     justify-content: space-between;
@@ -193,3 +157,5 @@ body {
     height: 50px;
     margin: .5rem;
 }
+
+

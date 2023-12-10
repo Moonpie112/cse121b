@@ -6,13 +6,42 @@
     <title>Final Project | Kayla Moon</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="flex">
     <div class="wrapper">
         <div class="quiz-container">
+
+            <!-- header of the quiz -->
             <div class="quiz-head">
-                <h1 class="quiz-title">Quiz Game</h1>
-                <div class="quiz-score flex">
-                    <span id = "current-question"></span>/<span id = "total-question">5</span>
+                <h1 class="quiz-title">SmartyScript Trivia</h1>
+            </div>
+
+            <!-- body of the quiz -->
+            <div class="quiz-body">
+                <h4 class="quiz-questions" id="quiz-question">Who was known as the "King of Pop?"</h4>
+                <ul class="quiz-answers">
+                    <li>Elvis</li>
+                    <li>Prince</li>
+                    <li>Michael Jackson</li>
+                    <li>Elton John</li>
+                </ul>
+                <div id="result">
+                    <!-- result here -->
+                </div>
+            </div>
+
+            <!-- quiz foot -->
+            <div class="quiz-foot">
+                <button type="btn" id="check-answer">Next</button>
+                <button type="btn" id="play-again">Play again!</button>
+                <div class="bottom">
+                    <div class="quiz-score flex small-text">
+                        <span id="footer-text">Question:</span>
+                        <span id = "current-question"></span>/<span id = "total-question"></span>
+                    </div>
+                    <div class="point-score flex small-text">
+                        <span id="footer-text">Score: </span>
+                        <span id="total-score">000</span>
+                    </div>
                 </div>
             </div>
         </div>
